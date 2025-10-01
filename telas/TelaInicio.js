@@ -58,8 +58,8 @@ const estilos = StyleSheet.create({
         fontWeight: 'bold',
     },
     foto: {
-        width: 80,
-        height: 80,
+        width: 90,
+        height: 90,
     },
     texto: {
         fontSize: 16,
