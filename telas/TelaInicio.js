@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Image, br } from 'react-native';
+import { Text, View, StyleSheet, Image, br, Button, ScrollView,} from 'react-native';
 
 function TelaInicio() {
     return (
@@ -8,8 +8,11 @@ function TelaInicio() {
                     source={ require('../assets/fotos/eu.jpeg') }
                     style={ estilos.foto }
                 />
+                
                 <Text style={estilos.nome}>Vitor Tavares</Text>
             </View>
+
+            <ScrollView>
             <Text style={estilos.texto}>
                 Meu nome é Vitor Hugo Tavares Abrão, nasci no dia 1º de
                     novembro de 2006 e moro em Rubiácea, uma cidade 
@@ -17,7 +20,7 @@ function TelaInicio() {
                     estou estudando e, enquanto isso, faço estágio no 
                     posto da cidade — uma experiência que, apesar de 
                     simples, tem me ensinado bastante sobre rotina, r
-                    esponsabilidade e gente. 
+                    esponsabilidade e gente.
                 </Text>
                 <Text style={estilos.texto}>
                     Sou uma pessoa muito calma, talvez até demais. Mas calma não quer dizer 
@@ -33,12 +36,12 @@ function TelaInicio() {
                     medalha, mas estou só começando. Tento aprender com o que a vida coloca 
                     no meu caminho e sigo em frente, do meu jeito: observando, pensando e, às vezes, rindo do absurdo das coisas.
                 </Text>
-            
-            {/* Foto
-            Nome
-            Biografia
-            Hobbies
-            Sonhos */}
+            </ScrollView>
+
+            <Button title="Sair" 
+            color="#000"
+            onPress={() => {}} />
+
         </View>
     );
 }
@@ -50,22 +53,29 @@ const estilos = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
         width: '100%',
+        backgroundColor: '#000',
+        padding: 10,
+        marginBottom: 10,
     },
     nome: {
         color: 'black',
         fontSize: 20,
         textAlign: 'center',
         fontWeight: 'bold',
+        color: "#fff",
     },
     foto: {
-        width: 90,
-        height: 90,
+        width: 110,
+        height: 110,
     },
     texto: {
         fontSize: 16,
         fontWeight: 'bold',
+        padding:13
+    },
 
-    }
+
 });
 
 export default TelaInicio;
+
